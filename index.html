@@ -1,38 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Placement calendar 2019</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.9.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.9.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.9.2/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.9.2/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.9.2/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.9.2/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.9.2/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.9.2/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.9.2/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.9.2/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-<style>
-    div {
-        width: 100%;
-        height: 0;
-        padding-bottom: 56%;
-        /* Change this till it fits the dimensions of your video */
-        position: relative;
-    }
-
-    div iframe {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-    }
-</style>
-
-<body>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+      body{
+              background-image: url(oat-pic.jpg);
+              background-position: bottom;
+              background-repeat: no-repeat;
+              font-family: lucida;
+              background-size: cover;
+              min-height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 20px 30px;
+      }
+      div {
+          width: 100%;
+          height: calc(90vh - 40px);
+          position: relative;
+          opacity: 88%;
+      }
+      div iframe {
+          border-radius: 5px;
+          width: 100%;
+      }  
+    </style>
+  </head>
+  <body>
     <div>
-        <iframe
-            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=Y19xbmJxZDQ0OW80cms4Ym5iaTUwcGxkcDVsOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%2333B679"
-            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=Y19xbmJxZDQ0OW80cms4Ym5iaTUwcGxkcDVsOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%2333B679"
+          style="border:solid 1px #777" width="800px" height="100%" frameborder="0" scrolling="no" today-button{background: red}></iframe>
     </div>
-</body>
-
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC1HQgQqEcyiVpRprljGIJPBjferB-PKcg",
+        authDomain: "placement-calendar-2019.firebaseapp.com",
+        projectId: "placement-calendar-2019",
+        storageBucket: "placement-calendar-2019.appspot.com",
+        messagingSenderId: "201646738966",
+        appId: "1:201646738966:web:1c6d3e812e182404f42f37"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+  </body>
 </html>
